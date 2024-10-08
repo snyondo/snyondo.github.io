@@ -1,0 +1,212 @@
+/* 
+    Author: Brian Nyathi
+    Date Modified: 29 September 2024
+    File Name: styles.css
+*/
+ /* css reset */
+ body, nav, header, main, div, h1, footer, img, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+ }
+
+ /* Box sizing style applying to all elements */
+* {
+    box-sizing: border-box;
+}
+
+ /* Style rules for the body and images */
+ body {
+    background: #fbe9b7;
+ }
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ /* Style rules for mobile viewport */
+
+/* Show mobile class, hide tablet-desktop class and menu-links id */
+.mobile {
+	display: block;
+}
+
+.tablet-desktop {
+	display: none;
+}
+
+/* Styles for the navigation area */
+nav {
+   width: 100%;
+   position: fixed;
+   top: 0;
+   z-index: 2;
+   background-color:#fbe9b7;
+}
+
+nav #menu-icon {
+   display: block;
+   color: #4a2b1c;
+   font-size: 2em;
+   text-align: right;
+}
+
+nav #nav-links {
+   display: none;
+}
+
+nav a {
+   display: block;
+   background-color: #fbe9b7;
+   text-align: center;
+   font-size: 2em;
+   font-family:"Comic Sans MS", cursive, sans-serif;
+   text-decoration: none;
+   color: #ac6222;
+   margin: 0.1em auto;
+}
+
+nav a:last-child {
+   border-bottom: .1em solid #2b1b0f ;
+   padding-bottom: 1em;
+}
+
+nav a:link {
+   color:#4a2b1c;
+}
+
+/* Styles fot the main area */
+#grid h1 span {
+   color:#ac6222;
+   background-color:#4a2b1c;
+   font-size: 1em;
+   padding: .1em .8em;
+   border-radius: .5em;
+}
+
+#grid {
+   text-align: center;
+   color: #4a2b1c;
+   text-align: center;
+   padding-bottom: 6em;
+}
+
+#grid h1 {
+   font-size: 2em;
+   margin: 2% auto;
+}
+
+#grid div {
+   border: 5px solid #2b1b0f;
+   border-radius: 10px;
+   background-color:#CC6600;
+   margin-bottom: 1em;
+   padding: 0 2em 5em;
+   position: relative;
+   z-index: 1; 
+}
+
+#grid div p {
+   color:#fbe9b7;
+   font-size: 1.5em;
+}
+
+ 
+#grid div img {
+   margin: auto;
+   border-radius: 3%;
+}
+
+#grid div a {
+   text-decoration: none;
+   color:#ac6222;
+   background-color:#4a2b1c;
+   font-size: 2em;
+   padding: .1em .8em;
+   border-radius: .5em;
+   position: absolute;
+   bottom: 0;
+}
+
+#about, #high {
+   text-align: center;
+   padding-top: 5em;
+   font-size: 2em;
+}
+
+/* Footer style rules */
+footer {
+   color: #fff;
+   text-align: center;
+   background-color: #2b1b0f;
+   position: fixed;
+   z-index: 3;
+   width: 100%;
+   bottom: 0;
+   left: 0;
+}
+
+
+ /* Media Query for Tablet Viewport */
+ @media screen and (min-width: 660px), print {
+	
+	/* Tablet Viewport: Show tablet-desktop class, hide mobile class */
+	.tablet-desktop {
+		display: block;
+	}
+
+	.mobile, .mobile-nav {
+		display: none;
+	}
+
+   /* Tablet Viewport: Navigation area styles */
+   
+   nav ul {
+      text-align: center;
+      list-style-type: none;
+      
+   }
+
+   nav ul li{
+      display: inline-block;
+      padding: 1em;
+   }
+
+   nav a {
+      display: inline-block;
+      border-radius: 10px;
+   }
+
+   /* Tablet Vieport: Styles for main content */
+   
+   #grid {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-gap: 1em;
+   }
+
+   #grid h1 {
+      grid-column: 1/ span 3;
+   }
+   
+
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1024px) {
+   /* Styles for the navigation area */
+   nav a:hover {
+      background-color: #CC6600;
+      color: #fff;
+   } 
+   
+   /* Styles for the main area */
+   #grid {
+      grid-template-columns: auto auto auto auto;
+   }
+
+   #grid h1 {
+      grid-column: 1/span 4;
+   }
+}
